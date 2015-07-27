@@ -3,26 +3,28 @@
 int same_or_not(int a, int b)
 {
   if (a == b)
-    return 1;
+    return 0;
   else
-    return 0; 
+    return 1; 
 }
 
 int all_not_same(int comp[8])
 {
-   int i1, i2, l1 = 9,  wrong = 0;
+   int i1, i2, l1 = 9,  wrong = 1;
    for(i1 = 0; i1 < l1; i1++) {
-     for(i2 = i1 + 1; i2 < l1 ; i2++) {
-       if(i1 == i2)
-         break;
-       else
-         wrong += same_or_not(comp[i1], comp[i2]);
+     if (wrong == 0)
+       break;
+     else {
+     for(i2 = i1 + 1; i2 < l1 ; i2++)
+      {
+        if (same_or_not(comp[i1], comp[i2]) == 0){
+          wrong = 0;
+          break;
+        }
+      }
      }
    }
-   if (wrong == 0)
-     return 1;
-   else
-     return 0;
+   return wrong;
 }
 
 int mod_zero(int a, int b)
