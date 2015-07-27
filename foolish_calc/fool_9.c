@@ -1,32 +1,28 @@
 #include <stdio.h>
 
-int all_not_same( \
-     int a , int b , int c , \
-     int d , int e , int f , \
-     int g , int h , int i  )
+int same_or_not(int a, int b)
 {
-  if ((a == b) || (a == c) || (a == d) || (a == e) || \
-      (a == f) || (a == g) || (a == h) || (a == i) || \
-\
-      (b == c) || (b == d) || (b == e) || (b == f) || \
-      (b == g) || (b == h) || (b == i) || \
-\
-      (c == d) || (c == e) || (c == f) || \
-      (c == g) || (c == h) || (c == i) || \
-\
-      (d == e) || (d == f) || \
-      (d == g) || (d == h) || (d == i) || \
-\
-      (e == f) || (e == g) || (e == h) || (e == i) || \
-\
-      (f == g) || (f == h) || (f == i) || \
-\
-      (g == h) || (g == i) || \
-\
-      (h == i))
-      return 0;
+  if (a == b)
+    return 1;
   else
-      return 1;
+    return 0; 
+}
+
+int all_not_same(int comp[8])
+{
+   int i1, i2, l1 = 9,  wrong = 0;
+   for(i1 = 0; i1 < l1; i1++) {
+     for(i2 = i1 + 1; i2 < l1 ; i2++) {
+       if(i1 == i2)
+         break;
+       else
+         wrong += same_or_not(comp[i1], comp[i2]);
+     }
+   }
+   if (wrong == 0)
+     return 1;
+   else
+     return 0;
 }
 
 int mod_zero(int a, int b)
@@ -49,7 +45,8 @@ int main(void)
         for(p = 1; p < 10; p++) {
          for(q = 1; q < 10; q++) {
           for(r = 1; r < 10; r++) {
-  if ((all_not_same(j, k, l, m, n, o, p, q, r)) && \
+            int alllist[] = {j, k, l, m, n, o, p, q, r};
+  if ((all_not_same(alllist)) && \
     (j + 13 * k / l + m + 12 * n - o - 11 + p * q / r - 10 == 66) && \
     mod_zero(13 * k, l) && mod_zero(p * q, r))
      printf("%d %d %d %d %d %d %d %d %d\n", \
