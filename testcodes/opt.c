@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
     exit_code = 1 ;
   }
   else {
-  int foo = strlen(argv[1]);
+  int foo = (int) strlen(argv[1]);
   int bar = printf("%d is number of argv[1] \n", foo);
   printf("%d is returned.\n", bar);
   printf("%d options\n", argc);
