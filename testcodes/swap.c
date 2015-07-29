@@ -1,4 +1,5 @@
 #include<stdio.h>
+int swap(int *, int *);
 
 int swap(int *x, int *y)
 {
