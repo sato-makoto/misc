@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# http://www.kuzuore.com/~kuzu/diary/?date=20160711#p02
 # loop
 # print filesize; sleep NUM
 

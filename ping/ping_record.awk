@@ -1,4 +1,5 @@
 # ping(8)
+# http://www.kuzuore.com/~kuzu/diary/?date=20160712#p03
 # ping $IP_ADDR 
 # 64 bytes from 192.168.0.1: icmp_seq=1 ttl=255 time=1.79 ms
 # 64 bytes from 192.168.0.1: icmp_seq=2 ttl=255 time=1.36 ms
