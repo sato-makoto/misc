@@ -1,35 +1,30 @@
 #include<stdio.h>
-#include<math.h>
+#include<stdlib.h>
 
+int main(int argc, char **argv){
 
-int[] makelist(int  number) {
-  int num = 12345678;
+  int num = atoi(argv[1]);
+
   int mylist[4] = {0,0,0,0};
-     if(num < 100) {
-       mylist[3] = num;
-     }else if(num < 10000) {
-       mylist[3] = num % 100;
-       mylist[2] = num / 100;
-     }else if(num < 1000000) {
-       mylist[3] = num % 10000 % 100;
-       mylist[2] = num % 10000 / 100;
-       mylist[1] = num / 10000;
-     }else if(num < 1000000) {
-     }else {
-       mylist[3] = num % 1000000 % 10000 % 100;
-       mylist[2] = num % 1000000 % 10000 / 100;
-       mylist[1] = num % 1000000 / 10000 ;
-       mylist[0] = num / 1000000;
+   if(num < 100) {
+     mylist[3] = num;
+   }else if(num < 10000) {
+     mylist[3] = num % 100;
+     mylist[2] = num / 100;
+   }else if(num < 1000000) {
+     mylist[3] = num % 10000 % 100;
+     mylist[2] = num % 10000 / 100;
+     mylist[1] = num / 10000;
+   }else if(num < 1000000) {
+   }else {
+     mylist[3] = num % 1000000 % 10000 % 100;
+     mylist[2] = num % 1000000 % 10000 / 100;
+     mylist[1] = num % 1000000 / 10000 ;
+     mylist[0] = num / 1000000;
      }
-
-  return mylist;
-}
-
-int main() {
-  int foo[4] = makelist(87654321);
   for(int i=0; i<4; i++) {
-    printf("%d,", foo[i]);
+    printf("%d,", mylist[i]);
   }
+  printf("\n");
   return 0;
 }
-
