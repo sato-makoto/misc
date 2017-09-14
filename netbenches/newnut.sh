@@ -1,8 +1,8 @@
 #!/bin/sh
 
-P1=$1
-P2=$2
-HOST=$3
+HOST=$1
+P1=$2
+P2=$3
 B_TIME=$4
 E_TIME=$5
 DA=`date "+%Y%m%d%H"`
