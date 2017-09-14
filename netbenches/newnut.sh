@@ -11,7 +11,7 @@ LOG=$HOME/log.txt
 
 if [ -z $5 ]; then
   echo "Lack of Parameter"
-  echo "C_PORT D_PORT HOST STIME DTIME"
+  echo "Usage: newnut.sh target_host control_port data_port start_min last_min"
   exit 1
 fi
 
