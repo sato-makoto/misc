@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
-from sys import argv
+from sys import stdin
 
 max_char = 13
-f = open(argv[1],'r')
+#f = open(argv[1],'r')
 list1 = []
-for x in f:
+for x in stdin:
   list1.append(x.strip())
-f.close()
+#f.close()
 
+"""
 print('テストです',end='\n\n') 
 
 for y in list1:
@@ -16,6 +17,7 @@ for y in list1:
   print(' ')
 
 print('')
+"""
 
 list2 = []
 for x in list1:
