@@ -32,9 +32,10 @@ for x in range(max_char):
   list3.append(bar)
 
 for y in list3:
-  for z in y:
-    if z == '＿':
-      print('　', end=' ')
-    else:
-      print(z, end=' ')
-  print('')
+  if len(y) != y.count('＿'):
+    for z in y:
+      if z == '＿':
+        print('　', end=' ')
+      else:
+        print(z, end=' ')
+    print('')
