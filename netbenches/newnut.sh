@@ -1,8 +1,8 @@
 #!/bin/sh
 
-P1=$1
-P2=$2
-HOST=$3
+HOST=$1
+P1=$2
+P2=$3
 B_TIME=$4
 E_TIME=$5
 DA=`date "+%Y%m%d%H"`
@@ -11,7 +11,7 @@ LOG=$HOME/log.txt
 
 if [ -z $5 ]; then
   echo "Lack of Parameter"
-  echo "C_PORT D_PORT HOST STIME DTIME"
+  echo "Usage: newnut.sh target_host control_port data_port start_min last_min"
   exit 1
 fi
 
