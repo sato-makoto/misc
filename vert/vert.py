@@ -33,5 +33,8 @@ for x in range(max_char):
 
 for y in list3:
   for z in y:
-    print(z, end=' ')
+    if z == '＿':
+      print('　', end=' ')
+    else:
+      print(z, end=' ')
   print('')
