@@ -4,10 +4,9 @@
   (car (cdr args)))
 
 (define fzlist
-  '#0=(#f #f "fizz" #f "buzz"
-	  "fizz" #f #f "fizz" "buzz"
-	  #f "fizz" #f #f "fizzbuzz"
-	  . #0#))
+  '#0=(#f #f "fizz" #f "buzz" "fizz" #f
+	  #f "fizz" "buzz" #f "fizz" #f
+	  #f "fizzbuzz" . #0#))
 
 (define cdr_num
   (lambda (num list)
