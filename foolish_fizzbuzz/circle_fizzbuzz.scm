@@ -1,4 +1,8 @@
 #!/usr/bin/env gosh
+
+(define (main args)
+  (car (cdr args)))
+
 (define fzlist
   '#0=(#f #f "fizz" #f "buzz"
 	  "fizz" #f #f "fizz" "buzz"
@@ -18,17 +22,19 @@
     (cond
      ((eq? (car
 	    (cdr_num num fzlist))
-	   #f)
-      num)
+	   #f) num)
      (else
       (car (cdr_num num fzlist))))))
+
+(define first 0)
 
 (define fizzbuzz
   (lambda (num)
     (cond
-     ((= num 1 ) (print 1))
+     ((zero? num) #t)
      (else
-      (print (fz num fzlist))
+      (set! first (+ first 1))
+      (print (fz first fzlist))
       (fizzbuzz (- num 1))))))
 
-(fizzbuzz 31)
+(fizzbuzz (string->number (car *argv*)))
