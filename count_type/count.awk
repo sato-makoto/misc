@@ -16,6 +16,7 @@ BEGIN {
 }
 {
 	gsub(" ", "", $0)
+	$0 = tolower($0)
 	split($0, line_array)
 	for(y in line_array)
 		alist[line_array[y]]+=1
