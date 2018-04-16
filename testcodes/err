@@ -1,0 +1,11 @@
+pi_ret.c: In function ‘rep’:
+pi_ret.c:10:3: warning: return makes integer from pointer without a cast [enabled by default]
+   return lp;
+   ^
+pi_ret.c: In function ‘main’:
+pi_ret.c:14:3: error: expected ‘=’, ‘,’, ‘;’, ‘asm’ or ‘__attribute__’ before ‘foo’
+   foo = lp(8);
+   ^
+pi_ret.c:14:3: error: ‘foo’ undeclared (first use in this function)
+pi_ret.c:14:3: note: each undeclared identifier is reported only once for each function it appears in
+pi_ret.c:14:3: warning: implicit declaration of function ‘lp’ [-Wimplicit-function-declaration]
