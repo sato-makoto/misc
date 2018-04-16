@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-four_op="+-*/"
+four_op=('+', '-', '*', '//')
+
 
 for a in four_op:
   for b in four_op:
