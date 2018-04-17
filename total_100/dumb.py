@@ -10,8 +10,8 @@ for a in four_op:
           for f in four_op:
             for g in four_op:
               for h in four_op:
-                num = eval(f"1 {a!s} 2 {b!s} 3 {c!s} 4 {d!s} 5 {e!s} \
-                             6 {f!s} 7 {g!s} 8 {h!s} 9")
+                num = eval('1 {} 2 {} 3 {} 4 {} 5 {} 6 {} 7 {} 8 {} 9'. \
+                    format(a, b, c, d, e, f, g, h))
                 if num == 100:
-                    print (f"1 {a!s} 2 {b!s} 3 {c!s} 4 {d!s} 5 {e!s} \
-                           6 {f!s} 7 {g!s} 8 {h!s} 9 = 100".replace("   ",""))
+                    print('1 {} 2 {} 3 {} 4 {} 5 {} 6 {} 7 {} 8 {} 9 = {}'. \
+                       format(a, b, c, d, e, f, g, h, num))
