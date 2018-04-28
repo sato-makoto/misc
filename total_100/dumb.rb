@@ -1,4 +1,14 @@
 #!/usr/bin/env ruby
+fary = Array.new(9)
+if ARGV.size < 9 then
+  for i in 9.times
+    fary[i] = i+1.to_f
+  end
+else 
+  for i in 9.times
+    fary[i] = ARGV[i].to_f
+  end
+end
 
 operators = ["+", "-", "*", "/"]
 
@@ -10,12 +20,16 @@ for one in operators
           for six in operators
             for seven in operators
               for eight in operators
-	        formula = "1 #{one} 2 #{two} 3 #{three} 4 #{four} 5 #{five} 6 #{six} 7 #{seven} 8 #{eight} 9"
-		 total = eval(formula) 
-                if total == 100 then
+	        formula = \
+                  "#{fary[0]} #{one} #{fary[1]} #{two} " + \
+                  "#{fary[2]} #{three} #{fary[3]} #{four} " + \
+                  "#{fary[4]} #{five} #{fary[5]} #{six} " + \
+                  "#{fary[6]} #{seven} #{fary[7]} #{eight} " + \
+                  "#{fary[8]}"
+		total = eval(formula) 
+                if total  == 100 then
 		  puts formula + " = " + String(total)
 		end  
-
               end
             end
           end
