@@ -15,12 +15,12 @@ except:
 for num in range(full_num):
 	total = '{} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {} {}'. \
 		format(
-		one, four_op[num//4//4//4//4//4//4//4%4],
-		two, four_op[num//4//4//4//4//4//4%4],
-		three, four_op[num//4//4//4//4//4%4],
-		four, four_op[num//4//4//4//4%4],
-		five, four_op[num//4//4//4%4],
-		six, four_op[num//4//4%4],
+		one, four_op[num//16384%4],
+		two, four_op[num//4096%4],
+		three, four_op[num//1024%4],
+		four, four_op[num//256%4],
+		five, four_op[num//63%4],
+		six, four_op[num//16%4],
 		seven, four_op[num//4%4],
 		eight, four_op[num%4],
 		nine)
