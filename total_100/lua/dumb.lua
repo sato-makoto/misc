@@ -13,7 +13,7 @@ for one = 1,4,1 do
           for six = 1,4,1 do
             for seven = 1,4,1 do
               for eight = 1,4,1 do
-                assert(loadstring('total =' ..
+                load('total =' ..
                       '1'..expr[one].. 
                       '2'..expr[two]..
                       '3'..expr[three]..
@@ -22,7 +22,7 @@ for one = 1,4,1 do
                       '6'..expr[six]..
                       '7'..expr[seven]..
                       '8'..expr[eight]..
-                      '9'))()
+                      '9')()
                 if total == 100 then
                   print (
                        '1 '..expr[one].. 
