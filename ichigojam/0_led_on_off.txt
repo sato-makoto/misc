@@ -1,0 +1,14 @@
+list
+10 LET T,0
+20 LED0
+30 T = T + 1
+40 WAIT 10
+50 if T = 10 then goto 100
+60 LED1
+70 WAIT 10
+80 goto 20
+100 /10
+OK
+save 0
+Saved 114byte
+OK

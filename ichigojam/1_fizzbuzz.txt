@@ -1,0 +1,7 @@
+10 INPUT "Tell Me The First Number ",F 
+20 INPUT "Tell Me The Last Number ",N
+30 FOR X=F to N
+40 IF X%15 = 0 THEN PRINT "fizzbuzz" ELSE IF X%5 = 0 THEN PRINT "buzz" ELSE IF X%3 = 0 THEN PRINT "fizz" ELSE PRINT X
+50 NEXT
+60 END
+
