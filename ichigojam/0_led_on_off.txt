@@ -7,7 +7,7 @@ list
 60 LED1
 70 WAIT 10
 80 goto 20
-100 /10
+100 end
 OK
 save 0
 Saved 114byte
