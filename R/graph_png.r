@@ -11,7 +11,8 @@ plot    (
         type="l", 
         xlab="Number",
         ylab="Times",
-        main="10000times $RANDOM % 83",
+	ylim=c(0,160),
+        main="10000 times $RANDOM % 83",
         )
 dev.off()
 
