@@ -10,6 +10,7 @@
 # 3 2000000
 # 4 1.38
 #
+BEGIN { print "Time MS" }
 $1==64 {
                 serial += 1
                 sub("icmp_seq=","",$5)
