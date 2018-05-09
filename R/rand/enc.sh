@@ -1,6 +1,6 @@
 #!/bin/sh
 
-NAME=random-`date "+%Y-%m-%d"`
+NAME=$1
 
 if [ -e  ${NAME}.mp4 ]; then
   rm ${NAME}.mp4
