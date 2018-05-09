@@ -8,7 +8,7 @@ fi
 
 if [ "$1" = "python3" ]; then
   HEAD=python3
-  python3 rand.py > rand2.txt
+  python3 rand.py script > rand2.txt
 fi
 
 MP4=$HEAD-`date "+random-int-%Y-%m-%d"`
