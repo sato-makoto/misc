@@ -1,10 +1,13 @@
 #!/bin/sh
 
 python3 rand.py >rand
+
+# 乱数の最初と最後を同じにする
 sed -i '$d' rand
 sed -n 2p rand >>rand
 sed -i '$s/0/99/' rand
 
+# グラフの枠(データなし)
 echo 'Number Times\n0 0' >zero
 
 Rscript ../graph_rand100.r rand
@@ -18,6 +21,7 @@ TEMP=r.png
 y1=0
 y2=0
 
+#折れ線部分抽出
 convert -crop  654x450+84+70 +repage rand.png $TEMP
 
 if [ ! -d jpg ]; then
@@ -27,6 +31,8 @@ if [ ! -d png ]; then
   mkdir png
 fi
 
+# 縦2つに切って、左右を入れ替えて一つのグラフに
+# 空枠に重ねて、JPEGして合成して動画に
 for i in `seq $WIDTH`
 do 
    y1=`expr $y1 + 1` 
