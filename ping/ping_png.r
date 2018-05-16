@@ -1,14 +1,15 @@
 #!/usr/bin/env Rscript
+args = commandArgs(trailingOnly=TRUE)
 
-mydata=read.table("source.txt", header=T)
-png(filename="ping100.png", width=800,height=600)
+mydata=read.table(args, header=T)
+png(filename=paste(args,".png",sep=""), width=800,height=600)
 plot    (
         mydata$Time, mydata$MS,
-        type="l", 
+        type="h", 
+	ylim=c(0.02,0.05),
         xlab="ping",
         ylab="ms",
-	ylim=c(0,3500),
-        main="ping -c 100 OPENVPN_FROM_REMOTE",
+        main="ping -c 300 router",
         )
 dev.off()
 
