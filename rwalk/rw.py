@@ -16,6 +16,6 @@ randmin = -10
 for t in range(t):
   x = x + random.randint(randmin,randmax)
   y = y + random.randint(randmin,randmax)
+  print(x, y)
 
-print(x, y)
 
