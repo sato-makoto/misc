@@ -6,12 +6,14 @@ full_num = 4**8
 sp = ' '
 
 try:
-  [one, two, three, four, five, six, seven, eight, nine ] = \
-    argv[1], argv[2], argv[3], argv[4], argv[5], argv[6], \
-    argv[7], argv[8], argv[9]
+    [one, two, three, four, five, six, seven, eight, nine ] = \
+      argv[1], argv[2], argv[3], argv[4], argv[5], argv[6], \
+      argv[7], argv[8], argv[9]
+    all = int(argv[10])
 except:
-  [one, two, three, four, five, six, seven, eight, nine ] = \
-    ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    [one, two, three, four, five, six, seven, eight, nine ] = \
+      ['1', '2', '3', '4', '5', '6', '7', '8', '9']
+    all = 100
 
 for num in range(full_num):
 	total = one + sp + four_op[num//16384%4] + sp + \
@@ -24,5 +26,5 @@ for num in range(full_num):
 		eight + sp + four_op[num%4] + sp + \
 		nine
 	evnum = eval(total)
-	if evnum == 100:
+	if evnum == all:
 		print(total, ' = ', evnum)
