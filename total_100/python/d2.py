@@ -16,14 +16,14 @@ except:
     all = 100
 
 for num in range(full_num):
-	total = one + sp + four_op[num//16384%4] + sp + \
-		two + sp + four_op[num//4096%4] + sp + \
-		three + sp + four_op[num//1024%4] + sp + \
-		four + sp + four_op[num//256%4] + sp + \
-		five + sp + four_op[num//63%4] + sp + \
-		six + sp + four_op[num//16%4] + sp + \
-		seven + sp + four_op[num//4%4] + sp + \
-		eight + sp + four_op[num%4] + sp + \
+	total = one + sp + four_op[num//2**14%4] + sp + \
+		two + sp + four_op[num//2**12%4] + sp + \
+		three + sp + four_op[num//2**10%4] + sp + \
+		four + sp + four_op[num//2**8%4] + sp + \
+		five + sp + four_op[num//2**6%4] + sp + \
+		six + sp + four_op[num//2**4%4] + sp + \
+		seven + sp + four_op[num//2**2%4] + sp + \
+		eight + sp + four_op[num//2**0%4] + sp + \
 		nine
 	evnum = eval(total)
 	if evnum == all:
