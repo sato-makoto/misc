@@ -1,5 +1,7 @@
 #!/usr/bin/sh
 
+# https://www.kuzuore.com/~kuzu/diary/?date=20180527#p03
+
 echo '
 args = commandArgs(trailingOnly=TRUE)             
 mydata=read.table(args, header=T)                 
