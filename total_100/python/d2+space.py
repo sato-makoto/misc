@@ -3,7 +3,6 @@ from sys import argv
 
 fifth_op="+-*/ "
 full_num = 5**8
-sp = ' '
 
 try:
     [one, two, three, four, five, six, seven, eight, nine ] = \
@@ -16,14 +15,14 @@ except:
     all = 100
 
 for num in range(full_num):
-	total = one + sp + fifth_op[num//5**7%5] + sp + \
-		two + sp + fifth_op[num//5**6%5] + sp + \
-		three + sp + fifth_op[num//5**5%5] + sp + \
-		four + sp + fifth_op[num//5**4%5] + sp + \
-		five + sp + fifth_op[num//5**3%5] + sp + \
-		six + sp + fifth_op[num//5**2%5] + sp + \
-		seven + sp + fifth_op[num//5**1%5] + sp + \
-		eight + sp + fifth_op[num//5**0%5] + sp + \
+	total = one + fifth_op[num//5**7%5] + \
+		two + fifth_op[num//5**6%5] + \
+		three + fifth_op[num//5**5%5] + \
+		four + fifth_op[num//5**4%5] + \
+		five + fifth_op[num//5**3%5] + \
+		six + fifth_op[num//5**2%5] + \
+		seven + fifth_op[num//5**1%5] + \
+		eight + fifth_op[num//5**0%5] + \
 		nine
 	total = total.replace(' ','')
 	evnum = eval(total)
