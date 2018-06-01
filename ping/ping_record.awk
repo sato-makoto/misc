@@ -11,17 +11,17 @@
 # Time MS
 # 1 1.79
 # 2 1.36
-# 3 2000000 <- No return.
+# 3 0 <- No return.
 # 4 1.38
 #
 BEGIN { print "Time MS" }
 $1==64 {
                 serial += 1
-                sub("icmp_seq=","",$5)
-                sub("time=","",$7)
-                while (serial < int($5)) {
-                        print serial, 2000000
+                sub("icmp_seq=","",$6)
+                sub("time=","",$8)
+                while (serial < int($6)) {
+                        print serial, 0
                         serial += 1
                 }
-                print $5,$7
+                print $6,$8
         }
