@@ -60,8 +60,8 @@ def m_eq(b, c):
     else:
         return False
 
-for a in range(1000,10000):
-  for b in range(1000,10000):
+for b in range(1000,10000):
+  for a in range(1000,10000):
     c = a + b
     s = a // 1000
     e = a % 1000 // 100
@@ -78,3 +78,4 @@ for a in range(1000,10000):
        and o_eq(b, c) \
        and m_eq(b, c):
       print('{} + {} = {}'.format(a, b, c))
+      exit(0)
