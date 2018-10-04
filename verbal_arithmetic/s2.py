@@ -25,8 +25,8 @@ def not_eq(s, e, n, d, m, o, r, y):
 
 # **N* + **** = **N**
 def n_eq(a, c):
-    x = a % 1000 % 100 // 10
-    z = c % 10000 % 1000 // 100
+    x = str(a)[2]
+    z = str(c)[2]
     if x == z:
       return True
     else:
@@ -34,9 +34,9 @@ def n_eq(a, c):
 
 # *E** + ***E = ***E*
 def e_eq(a, b, c):
-    x = a % 1000 // 100
-    y = b % 1000 % 100 % 10
-    z = c % 10000 % 1000 % 100 // 10
+    x = str(a)[1]
+    y = str(b)[3]
+    z = str(c)[3]
     if x == y == z:
       return True
     else:
@@ -44,8 +44,8 @@ def e_eq(a, b, c):
       
 # **** + *O** = *O***
 def o_eq(b, c):
-    y = b % 1000 // 100
-    z = c % 10000 // 1000
+    y = str(b)[1]
+    z = str(c)[1]
     if y == z:
         return True
     else:
@@ -53,8 +53,8 @@ def o_eq(b, c):
 
 # **** + M*** = M****
 def m_eq(b, c):
-    y = b // 1000
-    z = c // 10000
+    y = str(b)[0]
+    z = str(c)[0]
     if y == z:
         return True
     else:
@@ -63,19 +63,16 @@ def m_eq(b, c):
 for b in range(1000,10000):
   for a in range(1000,10000):
     c = a + b
-    s = a // 1000
-    e = a % 1000 // 100
-    n = a % 1000 % 100 // 10
-    d = a % 1000 % 100 % 10
-    m = b // 1000
-    o = b % 1000 // 100
-    r = b % 1000 % 100 // 10
-    y = c % 10000 % 1000 % 100 % 10
-    if c > 9999 and c < 20000 \
-       and not_eq(s, e, n, d, m, o, r, y) \
-       and e_eq(a, b, c) \
-       and n_eq(a, c) \
-       and o_eq(b, c) \
-       and m_eq(b, c):
-      print('{} + {} = {}'.format(a, b, c))
-      exit(0)
+    if c > 9999:
+       s, e, n, d = str(a)
+       m = str(b)[0]
+       o = str(b)[1]
+       r = str(b)[2]
+       y = str(c)[4]
+       if  not_eq(s, e, n, d, m, o, r, y) \
+               and e_eq(a, b, c) \
+               and n_eq(a, c) \
+               and o_eq(b, c) \
+               and m_eq(b, c):
+                   print('{} + {} = {}'.format(a, b, c))
+                   exit(0)
