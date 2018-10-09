@@ -17,11 +17,17 @@
 BEGIN { print "Time MS" }
 $1==64 {
                 serial += 1
-                sub("icmp_seq=","",$6)
-                sub("time=","",$8)
-                while (serial < int($6)) {
+		if ($5 ~ "icmp_seq=*") {
+			num = $5
+			time = $7 }
+		else {
+			num = $6
+			time = $8 }
+		sub("icmp_seq=","",num)
+		sub("time=","",time)
+                while (serial < int(num)) {
                         print serial, 0
                         serial += 1
                 }
-                print $6,$8
+                print num, time
         }
