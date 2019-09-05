@@ -7,5 +7,5 @@ YEAR=`date +%Y`
 FUTURE=`date -d ${YEAR}$1 +%j`
 
 DAYS=`echo $FUTURE - $NOW | bc`
-echo 当日まで、あと残すところ${DAYS}日
+echo 当日まで、あと残すところ${DAYS}日です。
 
