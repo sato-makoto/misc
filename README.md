@@ -1,4 +1,4 @@
-# misc
+# misc scripts
 
 ping: some my utils
 
