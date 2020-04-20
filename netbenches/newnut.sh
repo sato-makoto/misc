@@ -1,17 +1,17 @@
 #!/bin/sh
 
-HOST=$1
-P1=$2
-P2=$3
-B_TIME=$4
-E_TIME=$5
+P1=$1
+P2=$2
+B_TIME=$3
+E_TIME=$4
+HOST=$5
 DA=`date "+%Y%m%d%H"`
 
 LOG=$HOME/log.txt
 
 if [ -z $5 ]; then
   echo "Lack of Parameter"
-  echo "Usage: newnut.sh target_host control_port data_port start_min last_min"
+  echo "C_PORT D_PORT STIME DTIME HOST"
   exit 1
 fi
 
