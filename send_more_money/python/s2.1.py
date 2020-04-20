@@ -2,6 +2,7 @@
 
 # send + more = money
 # s e n d m o r y
+#  [0 - s] [1 - e] [2 - n] [3 - d] [4 - m] [5 - o] [6 - r] [7 - y]
 
 for y in range(10):
     for r in range(10):
@@ -16,6 +17,4 @@ for y in range(10):
                                 (s * 1000 + e * 100 + n * 10 + d 
                                         + m * 1000 + o * 100 + r * 10 + e
                                         == m * 10000 + o * 1000 + n * 100 + e * 10 + y):
-                                    print(s , e , n , d , "+", m , o , r , e , 
-                                            "=", m , o , n , e , y)
-                                   # print("s e n d + m o r e = m o n e y")
+                                    print("  {0} {1} {2} {3}\n+ {4} {5} {6} {1}\n---------\n{4} {5} {2} {1} {7}".format(s, e, n, d, m, o, r, y))
