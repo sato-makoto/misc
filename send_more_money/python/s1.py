@@ -35,6 +35,7 @@ for x in range(10000, 20000):
             add1 = s * 1000 + e * 100 + n * 10 + d
             add2 = m * 1000 + o * 100 + r * 10 + e
             total = m * 10000 + o * 1000 + n * 100 + e * 10 + y
-            if (s != e != n != d != m != o != r != y) and (add1 + add2 == total):
+            check = {s, e, n, d, m, o, r, y}
+            if (len(check) == 8) and (add1 + add2 == total):
                 print(add1 , " + ", add2, " = ", total)
 
