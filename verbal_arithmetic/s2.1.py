@@ -3,6 +3,11 @@
 # send + more = money
 # s e n d m o r y
 #  [0 - s] [1 - e] [2 - n] [3 - d] [4 - m] [5 - o] [6 - r] [7 - y]
+
+print('')
+print("  {0} {1} {2} {3}\n+ {4} {5} {6} {1}\n---------\n{4} {5} {2} {1} {7}".format('s', 'e', 'n', 'd', 'm', 'o', 'r', 'y'))
+print('')
+
 m = 1
 for y in range(10):
     for r in range(10):
