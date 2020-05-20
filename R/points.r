@@ -1,8 +1,26 @@
 #!/usr/bin/env Rscript
 
-# $ for x in `seq 10000`; do echo `expr $RANDOM % 83` >> times.txt; done
-# $ sort -n times.txt |uniq -c | awk '{print $2, $1}' >source.txt
+# 1st, 2nd, 3rd txt files
+#num first
+#1 1
+#2 2
+#3 5
+#4 1
+#5 4
 
+#num second
+#1 2
+#2 4
+#3 2
+#4 3
+#5 2
+
+#num third
+#1 5
+#2 3
+#3 1
+#4 1
+#5 1
  
 fst=read.table("1st", header=T)
 snd=read.table("2nd", header=T)
@@ -27,3 +45,4 @@ legend("topright",c("first", "second", "third"),
 	)
 warnings()
 dev.off()
+
