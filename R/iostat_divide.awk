@@ -24,7 +24,6 @@ BEGIN{
 	print "Time f_await" > "f_await";
 	print "Time aqu-sz" > "aqu-sz";
 	print "Time per_util" > "per_util";
-	t+=1;
 }
 
 $1=="dm-0"{
