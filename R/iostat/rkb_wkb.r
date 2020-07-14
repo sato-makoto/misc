@@ -2,7 +2,7 @@
 
 rkB_s=read.table("sda_r", header=T)
 wkb_s=read.table("sdb_w", header=T)
-png(filename="sda_r_sdb_w_long.png", width=10240,height=768)
+png(filename="sda_r_sdb_w.png", width=1024,height=768)
 #pdf(file="test.pdf")
 plot(
 	wkb_s$Time, wkb_s$wkB_s, type="l", col="3",
