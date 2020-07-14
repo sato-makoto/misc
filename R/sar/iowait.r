@@ -1,9 +1,9 @@
 #!/usr/bin/env Rscript
 
-cpu0=read.table("cpu0", header=T)
-cpu1=read.table("cpu1", header=T)
-cpu2=read.table("cpu2", header=T)
-cpu3=read.table("cpu3", header=T)
+cpu0=read.table("iowait_cpu0", header=T)
+cpu1=read.table("iowait_cpu1", header=T)
+cpu2=read.table("iowait_cpu2", header=T)
+cpu3=read.table("iowait_cpu3", header=T)
 png(filename="sar_iowait.png", width=1024,height=768)
 #pdf(file="test.pdf")
 plot(

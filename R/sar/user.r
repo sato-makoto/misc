@@ -1,10 +1,10 @@
 #!/usr/bin/env Rscript
 
-cpu0=read.table("bin_cpu0", header=T)
-cpu1=read.table("bin_cpu1", header=T)
-cpu2=read.table("bin_cpu2", header=T)
-cpu3=read.table("bin_cpu3", header=T)
-png(filename="apt_install.png", width=1024,height=768)
+cpu0=read.table("user_cpu0", header=T)
+cpu1=read.table("user_cpu1", header=T)
+cpu2=read.table("user_cpu2", header=T)
+cpu3=read.table("user_cpu3", header=T)
+png(filename="sar_user.png", width=1024,height=768)
 #pdf(file="test.pdf")
 plot(
 	cpu0$Time, cpu0$user, type="l", col="2",lwd="2",
