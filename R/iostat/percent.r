@@ -6,7 +6,7 @@ png(filename="percent.png", width=1024,height=768)
 plot    (
 	mydata$Time,
         mydata$Percent,
-	col="3",
+	col="2",
         type="l", 
 #	log="y",
         xlab="Times",
@@ -16,7 +16,7 @@ plot    (
         )
 legend  ("topright",c("進捗状況"),
 	pch = 16,
-	col = c(3)
+	col = c(2)
 	)
 
 dev.off()

@@ -7,7 +7,7 @@ png(filename="second.png", width=1024,height=768)
 plot    (
 	mydata$Time,
         mydata$Second,
-	col="3",
+	col="2",
         type="h", 
 	lwd=1,
 #	log="y",
@@ -18,13 +18,13 @@ plot    (
 points  (
 	mydata2$Time,
         mydata2$Second,
-	col="2",
+	col="3",
         type="l", 
 	lwd="2",
 	)
 legend  ("topright",c("表示された残り時間", "実際の残り時間"),
 	pch = 16,
-	col = c(3,2)
+	col = c(2,3)
 	)
 
 dev.off()
