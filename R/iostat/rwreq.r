@@ -12,7 +12,7 @@ plot(
         main="ddrescue iostat"
 )
 points(
-	rareq$Time, rareq$sda_rareq, type="l", col="3"
+	rareq$Time, rareq$sda_rareq, type="l", col="3",
 )
 legend("topright",c("sda: rareq-sz", "sdb: wareq-sz"),
 		pch = 15,
