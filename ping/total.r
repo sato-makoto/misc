@@ -20,7 +20,7 @@ plot    (
 #	ylim=c(0.02,0.05),
         xlab="ping time",
         ylab="ms",
-        main="ping -6 -c 300 www.kuzuore.com"
+        main="ping -6 -c 100 www.kuzuore.com"
         )
 points	(
         iij$Time, iij$MS,
