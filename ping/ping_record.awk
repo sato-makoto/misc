@@ -14,7 +14,11 @@
 # 3 0 <- No return.
 # 4 1.38
 #
-BEGIN { print "Time MS" }
+# END: when packet loss until last ping
+
+BEGIN { print "Time MS" 
+	last = 100
+	}
 $1==64 {
                 serial += 1
 		if ($5 ~ "icmp_seq=*") {
@@ -31,3 +35,9 @@ $1==64 {
                 }
                 print num, time
         }
+END {
+	while (last  > serial) {
+		serial += 1
+		print serial, 0
+	}
+}
