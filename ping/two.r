@@ -2,8 +2,8 @@
 
 args = commandArgs(trailingOnly=TRUE)
 
-wan=read.table("wan", header=T)
-lan=read.table("lan", header=T)
+wan=read.table("uqdata", header=T)
+lan=read.table("wifidata", header=T)
 png(filename=paste("ping_wan_and_lan",".png",sep=""), width=1024,height=768)
 par(ps=16,oma=c(2,2,2,2))
 # par(family="IPAMincho",ps=20,oma=c(2,2,2,2))

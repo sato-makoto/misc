@@ -17,7 +17,7 @@ plot    (
         type="l", 
 	col="3",
 #	log="y",
-#	ylim=c(0.02,0.05),
+	ylim=c(0,250),
         xlab="ping time",
         ylab="ms",
         main="ping -6 -c 100 www.kuzuore.com"
