@@ -2,8 +2,8 @@
 
 args = commandArgs(trailingOnly=TRUE)
 
-wan=read.table("uqdata", header=T)
-lan=read.table("wifidata", header=T)
+wan=read.table("wandata", header=T)
+lan=read.table("landata", header=T)
 png(filename=paste("ping_wan_and_lan",".png",sep=""), width=1024,height=768)
 par(ps=16,oma=c(2,2,2,2))
 # par(family="IPAMincho",ps=20,oma=c(2,2,2,2))
@@ -17,7 +17,7 @@ plot    (
 	ylim=c(0,250),
         xlab="ping time",
         ylab="ms",
-        main="wireless ping -c 100 wan and router"
+        main="wireless ping6 -c 100 wan and router"
         )
 points	(
         wan$Time, wan$MS,

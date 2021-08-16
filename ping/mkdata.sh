@@ -1,12 +1,12 @@
 #!/bin/sh
 # create graph data and make graph
-for num in sb iij uq wifi
+for num in sb iij uq lan wan
 do
 	awk -f ping_record.awk *$num > ${num}data
 done
 
-Rscript total.r
 Rscript two.r
+Rscript total.r
 
 mkdir -pv r scripts data
 mv *.r  r
