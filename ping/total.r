@@ -4,10 +4,11 @@
 
 args = commandArgs(trailingOnly=TRUE)
 
+lan=read.table("landata", header=T)
 uq=read.table("uqdata", header=T)
 iij=read.table("iijdata", header=T)
 sb=read.table("sbdata", header=T)
-png(filename=paste("three_carriers",".png",sep=""), width=1024,height=768)
+png(filename=paste("carriers_and_wifi",".png",sep=""), width=1024,height=768)
 par(ps=16,oma=c(2,2,2,2))
 # par(family="IPAMincho",ps=20,oma=c(2,2,2,2))
 # oma=c(under, left, upper, right)
@@ -19,7 +20,7 @@ plot    (
 #	log="y",
 	ylim=c(0,250),
         xlab="ping time",
-        ylab="ms",
+        ylab="ms(0 means packet loss)",
         main="ping -6 -c 100 www.kuzuore.com"
         )
 points	(
@@ -32,9 +33,14 @@ points	(
 	type="l",
 	col="5",
 )
-legend	("topright", c("UQ Wimax", "IIJ", "SB"),
+points	(
+        lan$Time, lan$MS,
+	type="l",
+	col="1",
+)
+legend	("topright", c("UQ Wimax", "IIJ", "SB", "UQ ping router"),
 	pch = 15,
-	col = c(3,4,5)
+	col = c(3,4,5,1)
 )
 dev.off()
 
