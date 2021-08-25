@@ -4,8 +4,8 @@
 
 args = commandArgs(trailingOnly=TRUE)
 
-lan=read.table("landata", header=T)
-uq=read.table("uqdata", header=T)
+lan=read.table("newlandata", header=T)
+uq=read.table("newuqdata", header=T)
 iij=read.table("iijdata", header=T)
 sb=read.table("sbdata", header=T)
 zero=read.table("zerodata", header=T)
@@ -19,7 +19,7 @@ plot    (
         type="l", 
 	col="3",
 #	log="y",
-	ylim=c(0,250),
+#	ylim=c(0,250),
         xlab="ping time",
         ylab="ms(0 means packet loss)",
         main="ping -6 -c 100 www.kuzuore.com"
