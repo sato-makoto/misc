@@ -3,6 +3,7 @@ args = commandArgs(trailingOnly=TRUE)
 
 mydata=read.table("percent", header=T)
 png(filename="percent.png", width=1024,height=768)
+date = paste("作成日時: ", Sys.time())
 plot    (
 	mydata$Time,
         mydata$Percent,

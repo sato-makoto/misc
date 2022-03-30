@@ -4,6 +4,7 @@ args = commandArgs(trailingOnly=TRUE)
 mydata=read.table("second", header=T)
 mydata2=read.table("real", header=T)
 png(filename="second.png", width=1024,height=768)
+date = paste("作成日時: ", Sys.time())
 plot    (
 	mydata$Time,
         mydata$Second,
