@@ -27,6 +27,7 @@ legend  ("topright",c("表示された残り時間", "実際の残り時間"),
 	pch = 16,
 	col = c(2,3)
 	)
-
+mtext(text=date, adj = 0)
+warnings()
 dev.off()
 

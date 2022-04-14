@@ -19,6 +19,7 @@ legend  ("topright",c("進捗状況"),
 	pch = 16,
 	col = c(2)
 	)
-
+mtext(text=date, adj = 0)
+warnings()
 dev.off()
 
