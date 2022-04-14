@@ -1,10 +1,17 @@
 #!/bin/sh
 
-echo "Time Second" > second
-echo "Time Second" > real
-for num in `awk -F',' -f get.awk typescript`
-do echo $num | bc
-done |cat -n >> second 
+# Time and predict remaining time data: second
+# Time and real remaining time data : real
 
-seq `tail -n2 second | head -n1 | awk '{print $1}'` -1 0  | cat -n >> real
+awk -f get.awk typescript > second
+end=`awk 'END{print $1}' second`
+for time in `cut -f 2 -d " " second | tac`
+do
+	echo `expr $end - $time` $time >> real
+done
+
+sed -i '1iTime Second' second
+sed -i '1iTime Second' real
+
+
 
