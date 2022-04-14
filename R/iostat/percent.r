@@ -10,7 +10,7 @@ plot    (
 	col="2",
         type="l", 
 #	log="y",
-        xlab="Times",
+        xlab="時間(秒)",
         ylab="Percentage(%)",
 	lwd=1,
         main="ddrescueの進捗状況(%)"

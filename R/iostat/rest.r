@@ -12,7 +12,7 @@ plot    (
         type="h", 
 	lwd=1,
 #	log="y",
-        xlab="Times",
+        xlab="時間(秒)",
         ylab="Remaining Seconds",
         main="ddrescueの予想した「残り時間(秒)」"
         )
