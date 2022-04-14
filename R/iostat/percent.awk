@@ -1,11 +1,7 @@
 #!/usr/bin/env gawk
 
-# awk -f time.awk typescript
-# Time Percent
-# 0s 0.00%
-# 1s 0.00%
-# 2s 0.04%
-# 3s 0.07%
+# sh percent.sh 
+# graph data of time and percentage(percent.r)
 
 BEGIN{
 print "Time Percent" 
