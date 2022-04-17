@@ -12,7 +12,7 @@ $7~"run" {
 	if (NF==9) {
 		if($9~"s") {
 			sub("s","",$9)
-		} else if ($9~m) {
+		} else if ($9~"m") {
 			sub("m","",$9)
 			$9 = $9 * 60
 		} else {
