@@ -9,7 +9,7 @@ fi
 
 awk -f get.awk typescript > second
 end=`awk 'END{print $1}' second`
-for time in `cut -f 2 -d " " second | tac`
+for time in `cut -f 1 -d " " second | tac`
 do
 	echo $time `expr $end - $time` >> real
 done
