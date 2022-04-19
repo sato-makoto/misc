@@ -6,22 +6,14 @@ mydata2=read.table("real", header=T)
 png(filename="second.png", width=1024,height=768)
 date = paste("作成日時: ", Sys.time())
 plot    (
-	mydata$Time,
-        mydata$Second,
-	col="2",
-        type="h", 
-	lwd=1,
+	mydata2$Time, mydata2$Second, col="3", type="l", lwd="2",
 #	log="y",
         xlab="時間(秒)",
         ylab="Remaining Seconds",
         main="ddrescueの予想した「残り時間(秒)」"
         )
 points  (
-	mydata2$Time,
-        mydata2$Second,
-	col="3",
-        type="l", 
-	lwd="2",
+	mydata$Time, mydata$Second, col="2", type="h", lwd=1,
 	)
 legend  ("topright",c("表示された残り時間", "実際の残り時間"),
 	pch = 16,
