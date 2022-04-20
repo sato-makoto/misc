@@ -10,7 +10,7 @@ plot(
         xlab="時間(秒)",
         ylab="r/s and w/s",
 #	ylim=c(-5,105),
-        main="ddrescue iostat"
+        main="ddrescue iostat r/s w/s"
 )
 points(
 	ws$Time, ws$sdb_ws, type="l", col="2",

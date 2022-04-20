@@ -10,7 +10,7 @@ plot(
         xlab="時間(秒)",
         ylab="rareq or wareq",
 #	ylim=c(-5,105),
-        main="ddrescue iostat"
+        main="ddrescue iostat rwreq"
 )
 points(
 	wareq$Time, wareq$sdb_wareq, type="l", col="2",

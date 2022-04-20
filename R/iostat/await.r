@@ -10,7 +10,7 @@ plot(
         xlab="時間(秒)",
         ylab="await(ms)",
 #	ylim=c(-5,105),
-        main="ddrescue iostat"
+        main="ddrescue iostat await"
 )
 points(
 	r_await$Time, r_await$sda_r_await, type="l", col="3",

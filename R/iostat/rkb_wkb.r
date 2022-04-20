@@ -10,7 +10,7 @@ plot(
         xlab="時間(秒)",
         ylab="rkB or wkB(s)",
 #	ylim=c(-5,105),
-        main="ddrescue iostat"
+        main="ddrescue iostat rkB/wkB"
 )
 points(
 	wkB_s$Time, wkB_s$sdb_wkB_s, type="l", col="2",
