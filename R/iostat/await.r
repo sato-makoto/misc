@@ -15,7 +15,7 @@ plot(
 points(
 	r_await$Time, r_await$sda_r_await, type="l", col="3",
 )
-legend("topright",c("sda: r_await", "sdb: w_awiat"),
+legend("topright",c("sda: r_await", "sdb: w_await"),
 		pch = 15,
 		col = c(3,2)
 	)
