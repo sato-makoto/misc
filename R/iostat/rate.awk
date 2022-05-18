@@ -6,10 +6,11 @@
 # is current rate incorrect?
 
 BEGIN {
+	FS=":"
 	average = "arate"
 	print ("Time arate") > average
 	current = "crate"
-	print ("Time arate") > current
+	print ("Time crate") > current
 }
 
 function unit(param) {
