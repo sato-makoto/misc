@@ -1,6 +1,6 @@
 #!/usr/bin/env gawk
 
-# awk -F':' -f rate.awk typescript
+# awk -f rate.awk typescript
 # -> atate and crate data file
 #
 # is current rate incorrect?
