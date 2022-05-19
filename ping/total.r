@@ -10,6 +10,7 @@ iij=read.table("iijdata", header=T)
 sb=read.table("sbdata", header=T)
 zero=read.table("zerodata", header=T)
 png(filename=paste("carriers_and_wifi",".png",sep=""), width=1024,height=768)
+date = paste("作成日時: ", Sys.time())
 par(ps=16,oma=c(2,2,2,2))
 # par(family="IPAMincho",ps=20,oma=c(2,2,2,2))
 # oma=c(under, left, upper, right)
@@ -48,5 +49,7 @@ legend	("topright", c("UQ Wimax", "IIJ", "SB", "UQ ping router"),
 	pch = 15,
 	col = c(3,4,5,1)
 )
+mtext(text=date, adj = 0)
+warnings()
 dev.off()
 
