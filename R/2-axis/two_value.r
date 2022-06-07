@@ -33,7 +33,7 @@ plot(
      xlab = ""
 )
 
-legend("topright", c("$RANDOM", "$RANDOM/10"), pch = 15, col = c("blue","red"))
+legend("topright", c("$RANDOM: first", "$RANDOM/10 second"), pch = 15, col = c("blue","red"))
 
 axis(4)
 mtext("second", side = 4, line = 2)
