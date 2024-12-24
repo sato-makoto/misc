@@ -25,9 +25,9 @@ $1=="日程"{
 # 出席回数を数えて格納する配列 
 $1~"[0-9]/[0-9]" {
 	for(x=2; x<=NF; x++){
-		days[x]+=0
+		times[x]+=0
 	       	if ($x=="◯"){
-		       	days[x]+=1
+		       	times[x]+=1
 	       	} 
 	} 
 } 
@@ -42,6 +42,6 @@ $1=="コメント" {
 }
 END{
  	for(y=2; y<=NF; y++) {
- 	       	print member[y], days[y], comm[y]
+ 	       	print member[y], times[y], comm[y]
         	}
 }
