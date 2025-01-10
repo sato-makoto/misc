@@ -1,7 +1,6 @@
 #!/usr/bin/env gawk 
 # 天体望遠鏡博物館の調整さんより
-# 各人の出席予定日数、コメント
-# 抽出
+# 各人の出席予定回数、コメント抽出
 # awk -F',' -f museum.awk chouseisan.csv
 
 # 調整さんのCSVより、以下の条件に合う
