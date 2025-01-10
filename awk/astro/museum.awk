@@ -22,12 +22,17 @@ $1=="日程"{
 }
 
 # $1が数字"/"数字にマッチする行より
-# 出席回数を数えて格納する配列 
+# times: 出席(◯)回数を数えて格納する配列 
+# t_times: 遅刻早退(△)を数えて格納する配列 
 $1~"[0-9]/[0-9]" {
 	for(x=2; x<=NF; x++){
 		times[x]+=0
+		t_times[x]+=0
 	       	if ($x=="◯"){
 		       	times[x]+=1
+	       	} 
+	       	if ($x=="△"){
+		       	t_times[x]+=1
 	       	} 
 	} 
 } 
@@ -41,7 +46,8 @@ $1=="コメント" {
 	}
 }
 END{
+	print "名前\t◯\t△\tコメント"
  	for(y=2; y<=NF; y++) {
- 	       	print member[y], times[y], comm[y]
+ 	       	print member[y]"\t"times[y]"\t"t_times[y]"\t"comm[y]
         	}
 }
